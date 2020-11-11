@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
-const devTo = 'https://dev.to/api/articles'
+const devTo = 'https://rpc1.newchain.newtonproject.org/newbridge/history?newchain_recipient_address=0x30ed7EDb10d058407ca74B4849d5A051554Bf0AF&direction=eth2new'
 
 const Post = ({post}) => (
   <a href={post.url} key={post.id} className="post">
     <article>
       <img src={post.social_image} alt={post.title} />
       <div>
-        <h1>{post.title}</h1>
-        <p>{post.description}</p>
+        <h1>{post.amount}</h1>
+        <p>{post.direction}</p>
+        <p>{post.status}</p>
       </div>
     </article>
   </a>
