@@ -20,7 +20,7 @@ const Posts = () => {
     fetch(devTo).then(r=> r.json()).then(setPosts)
   }, [])
 
-  return posts.map(post => <Post post={post} />)
+  return posts.map(post => <Post post={post.list} />)
 }
 
 export default Posts
